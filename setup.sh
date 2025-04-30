@@ -3,3 +3,4 @@
 # Install fonts
 sudo pacman -S noto-fonts-emoji
 sudo pacman -S ttf-font-awesome
+sudo pacman -S ttf-roboto
