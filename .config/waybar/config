@@ -76,7 +76,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
       },
       "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "",
@@ -93,7 +93,7 @@
       },
       "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "power-profiles-daemon": {
