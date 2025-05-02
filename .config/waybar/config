@@ -23,7 +23,7 @@
         "format": "{}",
         "max-length": 35,
         "rewrite": {
-          "": "Harsh"
+          "": "None"
         },
         "separate-outputs": true,
       },

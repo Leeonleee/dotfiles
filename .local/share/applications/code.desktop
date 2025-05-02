@@ -2,7 +2,7 @@
 Name=Visual Studio Code
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
-Exec=/usr/bin/code %F --force-device-scale-factor=2
+Exec=/usr/bin/code --ozone-platform=wayland %F
 Icon=visual-studio-code
 Type=Application
 StartupNotify=false
