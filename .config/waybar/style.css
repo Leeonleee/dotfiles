@@ -76,6 +76,12 @@ button:hover {
     padding-right: 2px;
 }
 
+#custom-swaync {
+  color: @flamingo;
+  padding-left: 8px;
+  padding-right: 2px
+}
+
 #power-profiles-daemon {
     padding-right: 8px;
 }

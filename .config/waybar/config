@@ -17,6 +17,7 @@
       "temperature",
       "battery",
       "power-profiles-daemon",
+      "custom/swaync",
       "clock"
       ],
       "hyprland/window": {
@@ -106,5 +107,15 @@
           "balanced": "",
           "power-saver": ""
         }
+      },
+      "custom/swaync": {
+        "format": "",  // Bell icon; change as you prefer
+        "tooltip": false,
+        "on-click": "swaync-client -t",
+        "on-click-right": "swaync-client -C",
+        "on-click-middle": "swaync-client -d",
+        "on-scroll-up": "swaync-client -i",
+        "on-scroll-down": "swaync-client -d"
       }
+
   }
