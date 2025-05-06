@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Vesktop
-Exec=/usr/bin/vesktop --ozone-platform=wayland %U 
+Exec=/usr/bin/vesktop %U --ozone-platform=wayland 
 Terminal=false
 Type=Application
 Icon=vesktop
