@@ -18,7 +18,8 @@
       "battery",
       "power-profiles-daemon",
       "custom/swaync",
-      "clock"
+      "clock",
+      "tray"
       ],
       "hyprland/window": {
         "format": "{}",
@@ -116,6 +117,10 @@
         "on-click-middle": "swaync-client -d",
         "on-scroll-up": "swaync-client -i",
         "on-scroll-down": "swaync-client -d"
+      },
+      "tray": {
+        "icon-size": 16,
+        "spacing": 10
       }
 
   }
