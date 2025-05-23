@@ -7,6 +7,7 @@ eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 
 
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/leon/.lmstudio/bin"

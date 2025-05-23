@@ -102,7 +102,7 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.o.relativenumber = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = "a"
@@ -265,6 +265,106 @@ require("lazy").setup({
 		{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
 		{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+		-- use opts = {} for passing setup options
+		-- this is equivalent to setup({}) function
+	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
+	},
+	{
+		"kawre/leetcode.nvim",
+		build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			-- "ibhagwan/fzf-lua",
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+		opts = {
+			arg = "leetcode.nvim",
+
+			lang = "python3",
+
+			cn = {
+				enabled = false,
+				translator = true,
+				translate_problems = true,
+			},
+
+			storage = {
+				home = vim.fn.stdpath("data") .. "/leetcode",
+				cache = vim.fn.stdpath("cache") .. "/leetcode",
+			},
+
+			plugins = {
+				non_standalone = false,
+			},
+
+			logging = true,
+
+			injector = {},
+
+			cache = {
+				update_interval = 60 * 60 * 24 * 7,
+			},
+
+			console = {
+				open_on_runcode = true,
+				dir = "row",
+				size = {
+					width = "90%",
+					height = "75%",
+				},
+				result = {
+					size = "60%",
+				},
+				testcase = {
+					virt_text = true,
+					size = "40%",
+				},
+			},
+
+			description = {
+				position = "left",
+				width = "40%",
+				show_stats = true,
+			},
+
+			picker = {
+				provider = nil, -- or "telescope" / "fzf-lua" if you're using one
+			},
+
+			hooks = {
+				["enter"] = {},
+				["question_enter"] = {},
+				["leave"] = {},
+			},
+
+			keys = {
+				toggle = { "q" },
+				confirm = { "<CR>" },
+				reset_testcases = "r",
+				use_testcase = "U",
+				focus_testcases = "H",
+				focus_result = "L",
+			},
+
+			theme = {},
+
+			image_support = false,
+		},
+	},
+	-- ADD NEW PLUGINS ABOVE
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
 	-- keys can be used to configure plugin behavior/loading/etc.
@@ -698,9 +798,9 @@ require("lazy").setup({
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				-- clangd = {},
+				clangd = {},
 				-- gopls = {},
-				-- pyright = {},
+				pyright = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
